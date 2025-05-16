@@ -1,0 +1,98 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.page-container {
+  height: 102vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.day-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+.day-label {
+  width: 100px;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+.time-field-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning-floating {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  transform: translateY(-50%);
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+
+.warn-icon{
+  font-size: 25px;
+}
+.field-with-error {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media (max-width: 768px) {
+  .day-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .day-label {
+    width: auto;
+    font-size: 1rem;
+  }
+
+  .time-field {
+    width: 100%;
+  }
+
+  .time-field-wrapper {
+    width: 100%;
+  }
+
+  .warning-floating {
+    position: static;
+    transform: none;
+    margin-top: 4px;
+    margin-left: 0;
+  }
+
+  .warn-icon {
+    font-size: 20px;
+  }
+
+  .page-container {
+    padding: 20px;
+    height: auto;
+  }
+}

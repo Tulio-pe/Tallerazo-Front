@@ -1,0 +1,19 @@
+<mat-card class="car-card">
+  <mat-card-header>
+    <mat-card-title>{{ vehicle.Plate }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>{{ vehicle.Brand }}</p>
+    <p>{{ vehicle.Model }}</p>
+    <p>{{ vehicle.Year }}</p>
+  </mat-card-content>
+
+  @if (mostrarBoton) {
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="cambiarEstado()">
+        Cambiar estado
+      </button>
+    </mat-card-actions>
+  }
+</mat-card>

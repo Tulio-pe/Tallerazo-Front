@@ -1,0 +1,12 @@
+.vehicles-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.item-auto {
+  flex: 1 1 200px;
+  max-width: 250px;
+}

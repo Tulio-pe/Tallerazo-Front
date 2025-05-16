@@ -1,0 +1,22 @@
+<div class="page-container">
+  <h1>Estados de reparación</h1>
+  <p>Actualiza la información de tu taller que verán los clientes</p>
+  <form [formGroup]="estadoForm" class="form-container">
+    <div class="estado-selector">
+      @for (estado of estados; track estado) {
+        <button
+          mat-raised-button
+          color="primary"
+          type="button"
+          [ngClass]="{ 'activo': estadoActual === estado }"
+          (click)="seleccionarEstado(estado)">
+          {{ labels[estado] }}
+        </button>
+      }
+    </div>
+    <div class="estado-actual">
+      Estado actual seleccionado:
+      <strong>{{ labels[estadoActual] }}</strong>
+    </div>
+  </form>
+</div>
