@@ -26,7 +26,7 @@ export class TranslationService {
   public getCurrentLanguage(): Language {
     return this.currentLanguageSubject.value
   }
-
+/*
   public translate(key: string): string {
     const translations = {
       es: {
@@ -40,5 +40,5 @@ export class TranslationService {
     }
 
     return translations[this.getCurrentLanguage()][key]
-  }
+  }*/
 }
