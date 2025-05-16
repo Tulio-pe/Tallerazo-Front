@@ -1,0 +1,61 @@
+<div class="empresa-detail-container">
+  <div class="header-detail">
+    <button routerLink="/seguimiento-reparacion" class="back-btn">⟵ {{ 'repairTracking.back' | translate }}</button>
+    <button class="seguimiento-btn" type="button">
+      <span class="icon">
+        <svg width="20" height="20" fill="none" stroke="#444" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="3" fill="#fff" stroke="#444"/>
+          <path d="M7 15l3.5-4.5 2.5 3 3-4" stroke="#444" stroke-width="2" fill="none"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="#444"/>
+        </svg>
+      </span>
+      <span class="title">{{ 'repairTracking.title' | translate }}</span>
+    </button>
+    <div class="lang-switch">
+      <button [class.active]="language === 'ES'" (click)="setLanguage('ES')">ES</button>
+      <button [class.active]="language === 'EN'" (click)="setLanguage('EN')">EN</button>
+    </div>
+  </div>
+  <ng-container *ngIf="empresa; else notFound">
+    <div class="empresa-main">
+      <div class="empresa-image-large">
+        <svg width="300" height="220" fill="none" stroke="#444" stroke-width="2" viewBox="0 0 200 150">
+          <rect x="10" y="10" width="180" height="130" rx="15" fill="#e9ecf2" stroke="#444"/>
+          <path d="M50 110l40-50 30 35 30-40" stroke="#444" stroke-width="6" fill="none"/>
+          <circle cx="60" cy="50" r="10" fill="#444"/>
+        </svg>
+      </div>
+      <div class="empresa-info-block">
+        <h1><span class="icon">&#128247;</span> {{ empresa.name }}</h1>
+        <div class="empresa-meta">
+          <span>&#128205; {{ empresa.address }}</span><br>
+          <span>&#128222; {{ empresa.phone }}</span>
+          <span>&#9993; {{ empresa.email }}</span>
+        </div>
+        <div class="empresa-desc">
+          <span>&#10060;</span> {{ empresa.description }}
+        </div>
+        <div class="empresa-servicios">
+          <b>{{ 'repairTracking.services' | translate }}</b><br>
+          <span class="servicio" *ngFor="let s of empresa.services">{{ s }}</span>
+        </div>
+      </div>
+      <div class="empresa-horario-block">
+        <button class="whatsapp-btn">Whatsapp</button>
+        <div class="horario-card">
+          <b>{{ 'repairTracking.schedule' | translate }}</b>
+          <div class="horario-row"><span>{{ 'repairTracking.sunday' | translate }}</span><span>12:00pm - 5pm</span></div>
+          <div class="horario-row"><span>{{ 'repairTracking.monday' | translate }}</span><span>12:00pm - 5pm</span></div>
+          <div class="horario-row"><span>{{ 'repairTracking.tuesday' | translate }}</span><span>12:00pm - 5pm</span></div>
+          <div class="horario-row"><span>{{ 'repairTracking.wednesday' | translate }}</span><span>12:00pm - 5pm</span></div>
+          <div class="horario-row"><span>{{ 'repairTracking.thursday' | translate }}</span><span>12:00pm - 5pm</span></div>
+          <div class="horario-row"><span>{{ 'repairTracking.friday' | translate }}</span><span>12:00pm - 5pm</span></div>
+          <div class="horario-row"><span>{{ 'repairTracking.saturday' | translate }}</span><span>12:00pm - 5pm</span></div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #notFound>
+    <div style="padding:2rem; color:#c00; font-size:1.2rem;">{{ 'repairTracking.companyNotFound' | translate }}</div>
+  </ng-template>
+</div>

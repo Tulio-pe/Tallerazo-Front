@@ -1,0 +1,150 @@
+.empresa-detail-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1400px;
+}
+.header-detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.header-detail .seguimiento-btn {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 0.3rem 1.2rem 0.3rem 0.8rem;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, border 0.2s;
+  color: #444;
+}
+.header-detail .seguimiento-btn .icon {
+  display: inline-flex;
+  margin-right: 0.5rem;
+}
+.header-detail .lang-switch button {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #888;
+  transition: background 0.2s, color 0.2s;
+}
+.header-detail .lang-switch button.active,
+.header-detail .lang-switch button:focus {
+  background: #f3f4f6;
+  color: #222;
+  border-color: #a1a1aa;
+}
+.empresa-main {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.empresa-image-large {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+  min-height: 250px;
+  background: #f7f8fa;
+  border-radius: 10px;
+}
+.empresa-info-block {
+  flex: 2 1 40%;
+  margin-top: 1rem;
+}
+.empresa-info-block h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.empresa-meta {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.empresa-desc {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.empresa-servicios {
+  margin-top: 1rem;
+}
+.servicio {
+  background: #e3e6ea;
+  border-radius: 8px;
+  padding: 0.2rem 0.8rem;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+.empresa-horario-block {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.whatsapp-btn {
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.horario-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1rem 2rem;
+  min-width: 250px;
+}
+.horario-card b {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+.horario-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.back-btn {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 0.3rem 1.2rem 0.3rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: auto;
+  color: #444;
+  transition: background 0.2s, border 0.2s;
+}
+.back-btn:hover {
+  background: #f3f4f6;
+  border-color: #a1a1aa;
+}

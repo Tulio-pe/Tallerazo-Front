@@ -1,0 +1,122 @@
+.repair-tracking-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.header .icon {
+  display: none;
+}
+.header .title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.lang-switch button {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #888;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-switch button.active,
+.lang-switch button:focus {
+  background: #f3f4f6;
+  color: #222;
+  border-color: #a1a1aa;
+}
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.filters select, .filters button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.company-card {
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px #0001;
+}
+.company-image {
+  width: 80px;
+  height: 80px;
+  background: #e3e6ea;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.company-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.company-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+.company-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.company-card button {
+  background: #e3e6ea;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+}
+.seguimiento-btn {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 0.3rem 1.2rem 0.3rem 0.8rem;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, border 0.2s;
+  color: #444;
+}
+.seguimiento-btn:hover {
+  background: #f3f4f6;
+  border-color: #a1a1aa;
+}
+.seguimiento-btn .icon {
+  display: inline-flex;
+  margin-right: 0.5rem;
+}

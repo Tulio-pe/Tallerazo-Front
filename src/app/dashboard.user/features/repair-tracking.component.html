@@ -1,0 +1,55 @@
+<div class="repair-tracking-container">
+  <div class="header">
+    <button class="seguimiento-btn" type="button">
+      <span class="icon">
+        <svg width="20" height="20" fill="none" stroke="#444" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="3" fill="#fff" stroke="#444"/>
+          <path d="M7 15l3.5-4.5 2.5 3 3-4" stroke="#444" stroke-width="2" fill="none"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="#444"/>
+        </svg>
+      </span>
+      <span class="title">{{ 'repairTracking.title' | translate }}</span>
+    </button>
+    <div class="lang-switch">
+      <button [class.active]="language === 'ES'" (click)="setLanguage('ES')">ES</button>
+      <button [class.active]="language === 'EN'" (click)="setLanguage('EN')">EN</button>
+    </div>
+  </div>
+  <div class="filters">
+    <select [(ngModel)]="region" (change)="onFilterChange()">
+      <option value="">{{ 'repairTracking.region' | translate }}</option>
+      <option value="Norte">Norte</option>
+      <option value="Sur">Sur</option>
+    </select>
+    <select [(ngModel)]="province" (change)="onFilterChange()">
+      <option value="">{{ 'repairTracking.province' | translate }}</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+    </select>
+    <select [(ngModel)]="district" (change)="onFilterChange()">
+      <option value="">{{ 'repairTracking.district' | translate }}</option>
+      <option value="Centro">Centro</option>
+      <option value="Periferia">Periferia</option>
+    </select>
+    <select [(ngModel)]="city" (change)="onFilterChange()">
+      <option value="">{{ 'repairTracking.city' | translate }}</option>
+      <option value="Ciudad 1">Ciudad 1</option>
+      <option value="Ciudad 2">Ciudad 2</option>
+    </select>
+    <button (click)="onSearch()">{{ 'repairTracking.search' | translate }}</button>
+  </div>
+  <div class="companies-grid">
+    <div class="company-card" *ngFor="let company of filteredCompanies">
+      <div class="company-image">[img]</div>
+      <div class="company-info">
+        <div class="company-title">{{ company.name }}</div>
+        <div class="company-meta">
+          <span>{{ company.address }}</span>
+          <span>{{ company.phone }}</span>
+        </div>
+        <div class="company-desc">{{ company.description }}</div>
+        <button (click)="onViewMore(company)">{{ 'repairTracking.viewMore' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>

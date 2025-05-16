@@ -1,0 +1,22 @@
+{
+  "repairTracking": {
+    "title": "Repair Tracking",
+    "region": "Region",
+    "province": "Province",
+    "district": "District",
+    "city": "City/Town",
+    "search": "Search",
+    "viewMore": "View more",
+    "back": "Back",
+    "services": "Services offered",
+    "schedule": "Opening hours",
+    "sunday": "Sunday",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "companyNotFound": "Company not found."
+  }
+}

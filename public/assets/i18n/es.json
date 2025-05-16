@@ -1,0 +1,22 @@
+{
+  "repairTracking": {
+    "title": "Seguimiento de reparación",
+    "region": "Región",
+    "province": "Provincia",
+    "district": "Distrito",
+    "city": "Localidad/Ciudad",
+    "search": "Buscar",
+    "viewMore": "Ver más",
+    "back": "Volver",
+    "services": "Servicios ofrecidos",
+    "schedule": "Horarios de atención",
+    "sunday": "Domingo",
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miércoles",
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "companyNotFound": "Empresa no encontrada."
+  }
+}
