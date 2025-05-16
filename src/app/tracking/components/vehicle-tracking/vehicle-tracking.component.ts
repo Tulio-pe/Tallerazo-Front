@@ -52,6 +52,6 @@ export class VehicleTrackingComponent implements OnInit {
   }
 
   newSearch(): void {
-    this.router.navigate(["/"])
+    this.router.navigate(["/vehicle-tracking"])
   }
 }
