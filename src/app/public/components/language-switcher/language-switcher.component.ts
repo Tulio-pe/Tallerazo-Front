@@ -1,38 +1,30 @@
-// En tu language-switcher.component.ts
-import { Component } from '@angular/core';
-import  { TranslationService } from "../../../coretrack/services/translation.service"
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../../coretrack/services/translation.service'; // Ajusta la ruta según tu estructura
 
 @Component({
   selector: 'app-language-switcher',
-  template: `
-    <div class="language-buttons">
-      <button (click)="switchLanguage('es')" [class.active]="currentLang === 'es'">ES</button>
-      <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'">EN</button>
-    </div>
-  `,
-  styles: [`
-    .language-buttons button {
-      padding: 5px 10px;
-      margin: 0 2px;
-    }
-    .active {
-      font-weight: bold;
-    }
-  `]
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './language-switcher.component.html',
+  styleUrls: ['./language-switcher.component.css']
 })
-export class LanguageSwitcherComponent {
-  currentLang: string;
+export class LanguageSwitcherComponent implements OnInit {
+  currentLanguage: string = 'es';  // Idioma por defecto
 
-  constructor(private translationService: TranslationService) {
-    this.currentLang = this.translationService.getCurrentLanguage();
+  constructor(private translationService: TranslationService) { }
 
-    // Subscribirse a cambios de idioma
+  ngOnInit(): void {
+    // Obtener el idioma actual al iniciar
+    this.currentLanguage = this.translationService.getCurrentLanguage();
+
+    // Suscribirse a cambios de idioma
     this.translationService.currentLanguage$.subscribe(lang => {
-      this.currentLang = lang;
+      this.currentLanguage = lang;
     });
   }
 
-  switchLanguage(lang: string): void {
+  changeLanguage(lang: string): void {
     this.translationService.changeLanguage(lang);
   }
 }
