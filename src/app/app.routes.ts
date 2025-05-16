@@ -7,6 +7,11 @@ export const routes: Routes = [
      import("./tracking/components/tracking-form/tracking-form.component").then((m) => m.TrackingFormComponent),
  },*/
   {
+    path: "login",
+    loadComponent: () =>
+      import("./auth/pages/login-page/login-page.component").then((m) => m.LoginPageComponent),
+  },
+  {
      path: "vehicle-tracking",
      loadComponent: () =>
        import("./tracking/components/tracking-form/tracking-form.component").then((m) => m.TrackingFormComponent),
