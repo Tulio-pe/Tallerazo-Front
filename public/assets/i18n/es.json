@@ -1,0 +1,19 @@
+{
+  "maintenance.tracking": "Seguimiento de reparación",
+  "tracking.number": "N° de tracking",
+  "tracking.code.instruction": "Código Placa de tu auto + clave",
+  "tracking.input.placeholder": "Escribe aquí tu código",
+  "tracking.submit.button": "Enviar código",
+  "language.spanish": "ES",
+  "language.english": "EN",
+  "vehicle.form.title": "Registro de vehículo",
+  "vehicle.form.plate": "Placa",
+  "vehicle.form.brand": "Marca",
+  "vehicle.form.model": "Modelo",
+  "vehicle.form.year": "Año",
+  "vehicle.form.submit": "Registrar",
+  "vehicle.form.plate.required": "La placa es obligatoria",
+  "vehicle.form.brand.required": "La marca es obligatoria",
+  "vehicle.form.model.required": "El modelo es obligatorio",
+  "vehicle.form.year.required": "El año es obligatorio"
+}

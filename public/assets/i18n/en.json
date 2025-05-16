@@ -1,0 +1,19 @@
+{
+  "maintenance.tracking": "Maintenance Tracking",
+  "tracking.number": "Tracking number",
+  "tracking.code.instruction": "Your vehicle plate code + password",
+  "tracking.input.placeholder": "Enter your code here",
+  "tracking.submit.button": "Submit code",
+  "language.spanish": "ES",
+  "language.english": "EN",
+  "vehicle.form.title": "Vehicle Registration",
+  "vehicle.form.plate": "Plate",
+  "vehicle.form.brand": "Brand",
+  "vehicle.form.model": "Model",
+  "vehicle.form.year": "Year",
+  "vehicle.form.submit": "Register",
+  "vehicle.form.plate.required": "Plate is required",
+  "vehicle.form.brand.required": "Brand is required",
+  "vehicle.form.model.required": "Model is required",
+  "vehicle.form.year.required": "Year is required"
+}
