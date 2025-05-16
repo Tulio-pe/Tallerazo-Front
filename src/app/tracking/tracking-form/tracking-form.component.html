@@ -1,0 +1,28 @@
+<div class="tracking-container">
+  <div class="tracking-card">
+    <div class="tracking-image">
+      <img src="/assets/images/tracking-icon.png" alt="Tracking Icon">
+    </div>
+    <div class="tracking-content">
+      <h2 class="tracking-title">N° de tracking</h2>
+      <p class="tracking-subtitle">Código Placa de tu auto + clave</p>
+
+      <form [formGroup]="trackingForm" (ngSubmit)="onSubmit()" class="tracking-form">
+        <input
+          type="text"
+          formControlName="trackingCode"
+          placeholder="Escribe aquí tu código"
+          class="tracking-input"
+          [class.invalid]="trackingForm.get('trackingCode')?.invalid && trackingForm.get('trackingCode')?.touched"
+        >
+        <button
+          type="submit"
+          class="tracking-button"
+          [disabled]="trackingForm.invalid || isLoading"
+        >
+          {{ isLoading ? 'Enviando...' : 'Enviar código' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

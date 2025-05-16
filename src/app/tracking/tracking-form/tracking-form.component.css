@@ -1,0 +1,91 @@
+/* Importar la fuente Inter desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Contenedor principal que ocupa toda la pantalla */
+.tracking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  padding: 20px;
+  font-family: "Inter", sans-serif; /* Aplicar fuente Inter a todo el componente */
+}
+
+.tracking-card {
+  display: flex;
+  width: 100%;
+  max-width: 600px; /* Limitar el ancho máximo */
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-image {
+  background-color: #ccc;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.tracking-image img {
+  width: 100%;
+  height: auto;
+}
+
+.tracking-content {
+  flex: 1;
+  padding: 20px 30px;
+  background-color: white;
+}
+
+.tracking-title {
+  font-size: 1.5rem;
+  font-weight: 600; /* Semi-bold para Inter */
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.tracking-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 400; /* Regular para Inter */
+}
+
+.tracking-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.tracking-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px 0 0 20px;
+  font-size: 14px;
+  outline: none;
+  font-family: "Inter", sans-serif; /* Asegurar que el input también use Inter */
+}
+
+.tracking-button {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-weight: 500; /* Medium para Inter */
+  transition: background-color 0.3s;
+  font-family: "Inter", sans-serif; /* Asegurar que el botón también use Inter */
+}
+
+.tracking-button:hover {
+  background-color: #1e40af;
+}
+
+.tracking-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
