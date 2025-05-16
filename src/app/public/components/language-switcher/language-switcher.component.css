@@ -1,0 +1,23 @@
+.language-selector {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.language-button {
+  padding: 4px 8px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.language-button.active {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.language-button:hover:not(.active) {
+  background-color: #f5f5f5;
+}
