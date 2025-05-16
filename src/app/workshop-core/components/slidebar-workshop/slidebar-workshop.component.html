@@ -1,0 +1,10 @@
+<h1>Autos</h1>
+<p>Listado de autos</p>
+<span>Actualiza la información de tu taller que verán los clientes</span>
+<div class="vehicles-list-container">
+  <app-item-auto class="item-auto"
+                 *ngFor="let vehicle of vehicles"
+                 [vehicle]="vehicle"
+                 [mostrarBoton]="false">
+  </app-item-auto>
+</div>
