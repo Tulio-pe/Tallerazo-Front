@@ -1,6 +1,6 @@
 import { Component, type OnInit } from "@angular/core"
 import  { Router } from "@angular/router"
-import  { TranslationService } from "../../../coretrack/services/translation.service"
+import  { TranslationService } from "../../../tracking/services/translation.service"
 import {LanguageSwitcherComponent} from '../language-switcher/language-switcher.component';
 
 @Component({

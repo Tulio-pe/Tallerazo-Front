@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslationService } from '../../../coretrack/services/translation.service'; // Ajusta la ruta según tu estructura
+import { TranslationService } from '../../../tracking/services/translation.service'; // Ajusta la ruta según tu estructura
 
 @Component({
   selector: 'app-language-switcher',
