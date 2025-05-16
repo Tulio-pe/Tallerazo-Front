@@ -1,0 +1,25 @@
+.page-container {
+  padding: 1rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.estado-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button.activo {
+  background-color: #333 !important;
+  color: white !important;
+}
+
+.estado-actual {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
