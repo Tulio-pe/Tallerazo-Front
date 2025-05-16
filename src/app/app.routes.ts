@@ -19,7 +19,11 @@ export const routes: Routes = [
       import("./tracking/components/vehicle-tracking/vehicle-tracking.component").then((m) => m.VehicleTrackingComponent),
   },*/
 
-
+  {
+    path: "workshop/cars",
+    loadComponent: () =>
+      import("./workshop-core/pages/list-cars/list-cars.component").then((m) => m.ListCarsComponent),
+  },
   {
     path: "workshop/dashboard",
     loadComponent: () =>

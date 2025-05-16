@@ -1,1 +1,5 @@
-<p>list-cars works!</p>
+<div class="vehicles-list-container">
+  <app-item-auto *ngFor="let vehicle of vehicles" [vehicle]="vehicle">
+  </app-item-auto>
+  <p *ngIf="vehicles.length === 0">No hay autos registrados</p>
+</div>
