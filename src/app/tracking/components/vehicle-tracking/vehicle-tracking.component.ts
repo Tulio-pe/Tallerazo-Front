@@ -3,7 +3,7 @@ import  { ActivatedRoute, Router } from "@angular/router"
 import { CommonModule } from "@angular/common"
 import  { VehicleTrackingService } from "../../services/vehicle-tracking.service"
 import type { VehicleTracking } from "../../domain/models/vehicle-tracking.model"
-
+import {ToolbarComponent} from '../../../public/components/toolbar/toolbar.component';
 @Component({
   selector: "app-vehicle-tracking",
   templateUrl: "./vehicle-tracking.component.html",
