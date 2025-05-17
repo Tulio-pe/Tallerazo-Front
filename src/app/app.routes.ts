@@ -1,11 +1,11 @@
 import type { Routes } from "@angular/router"
 
 export const routes: Routes = [
-  /*{
+  {
    path: "",
    loadComponent: () =>
-     import("./tracking/components/tracking-form/tracking-form.component").then((m) => m.TrackingFormComponent),
- },*/
+     import("./workshop-discovery/pages/workshop-catalogue-page/workshop-catalogue-page.component").then((m) => m.WorkshopCataloguePageComponent),
+ },
   {
     path: "login",
     loadComponent: () =>
