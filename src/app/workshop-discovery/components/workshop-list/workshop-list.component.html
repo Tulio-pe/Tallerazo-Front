@@ -1,1 +1,7 @@
-<p>workshop-list works!</p>
+<section class="catalog">
+  <app-workshop-item
+    *ngFor="let w of workshops"
+    [workshop]="w"
+    (view)="goToDetail($event)">
+  </app-workshop-item>
+</section>
