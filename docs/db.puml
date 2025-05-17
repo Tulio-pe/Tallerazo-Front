@@ -1,0 +1,123 @@
+@startuml
+!define Table(name,desc) class name as "desc" << (T,#FFAAAA) >>
+hide circle
+
+Table(VehicleStatus, "VehicleStatus") {
+  +status_id : UUID <<PK>>
+  status_name : String
+}
+
+Table(Vehicle, "Vehicle") {
+  +vehicle_id : UUID <<PK>>
+  license_plate : String <<UNIQUE>>
+  brand : String
+  model : String
+  year : Int
+  fuel_type : String
+}
+
+Table(ServiceRecord, "ServiceRecord") {
+  +service_record_id : UUID <<PK>>
+  vehicle_id : UUID <<FK>>
+  status_id : UUID <<FK>>
+  tracking_code : String <<UNIQUE>>
+  registration_date : TIMESTAMP
+  notes : TEXT
+  last_updated : TIMESTAMP
+}
+
+Table(WorkshopServiceRecord, "WorkshopServiceRecord") {
+  +workshop_service_id : UUID <<PK, FK>>
+  +service_record_id : UUID <<PK, FK>>
+}
+
+Table(WorkshopService, "WorkshopService") {
+  +workshop_id : UUID <<PK, FK>>
+  +service_type_id : UUID <<PK, FK>>
+  base_price : Decimal
+}
+
+Table(ServiceType, "ServiceType") {
+  +service_type_id : UUID <<PK>>
+  name : String
+  description : String
+}
+
+Table(WorkshopAccount, "WorkshopAccount") {
+  +account_id : UUID <<PK>>
+  workshop_id : UUID <<FK>>
+  email : String
+  password : String
+  role : Enum(Admin, Staff)
+  is_active : Boolean
+}
+
+Table(Workshop, "Workshop") {
+  +workshop_id : UUID <<PK>>
+  name : String
+  description : String
+  location_id : UUID <<FK>>
+  schedule_id : UUID <<FK>>
+  contact_email : String
+  contact_phone : String
+  created_at : Timestamp
+  is_active : Boolean
+}
+
+Table(Location, "Location") {
+  +location_id : UUID <<PK>>
+  region_id : UUID <<FK>>
+  province_id : UUID <<FK>>
+  district_id : UUID <<FK>>
+  full_address : String
+}
+
+Table(Region, "Region") {
+  +region_id : UUID <<PK>>
+  name : String
+}
+
+Table(Province, "Province") {
+  +province_id : UUID <<PK>>
+  region_id : UUID <<FK>>
+  name : String
+}
+
+Table(District, "District") {
+  +district_id : UUID <<PK>>
+  province_id : UUID <<FK>>
+  name : String
+}
+
+Table(Locality, "Locality") {
+  +locality_id : UUID <<PK>>
+  district_id : UUID <<FK>>
+  name : String
+}
+
+
+
+Table(WorkshopSchedule, "WorkshopSchedule") {
+  +schedule_id : UUID <<PK>>
+  workshop_id : UUID <<FK>>
+  day_of_week : Enum
+  start_time : Time
+  end_time : Time
+  is_active : Boolean
+}
+
+VehicleStatus ||--o{ ServiceRecord : "status_id"
+Vehicle ||--o{ ServiceRecord : "vehicle_id"
+ServiceRecord ||--o{ WorkshopServiceRecord: "N:M"
+WorkshopServiceRecord||--o{ ServiceType: "N:M"
+Workshop ||--o{ WorkshopService : "1:N"
+ServiceType ||--o{ WorkshopService : "1:N"
+Workshop ||--o{ WorkshopAccount : "1:N"
+Workshop ||--o{ WorkshopSchedule : "1:N"
+Locality||--o{Location: "1:N"
+Province ||--o{ District : "province_id"
+Region ||--o{ Province : "region_id"
+District ||--o{ Locality : "district_id"
+Workshop ||--|| Location : "location_id"
+Vehicle||--||Workshop
+@enduml

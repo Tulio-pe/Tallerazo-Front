@@ -1,0 +1,171 @@
+{
+  "vehicleStatus": [
+    { "status_id": "VS1", "status_name": "Disponible" },
+    { "status_id": "VS2", "status_name": "En servicio" },
+    { "status_id": "VS3", "status_name": "Listo para entrega" }
+  ],
+
+  "vehicles": [
+    {
+      "vehicle_id": "V1",
+      "license_plate": "ABC-123",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2021,
+      "fuel_type": "Gasolina"
+    },
+    {
+      "vehicle_id": "V2",
+      "license_plate": "XYZ-987",
+      "brand": "Hyundai",
+      "model": "Accent",
+      "year": 2019,
+      "fuel_type": "GLP"
+    }
+  ],
+
+  "serviceRecords": [
+    {
+      "service_record_id": "SR1",
+      "vehicle_id": "V1",
+      "status_id": "VS2",
+      "tracking_code": "TRK-0001",
+      "registration_date": "2025-05-15T10:00:00Z",
+      "notes": "Cambio de aceite y filtro",
+      "last_updated": "2025-05-16T15:30:00Z"
+    },
+    {
+      "service_record_id": "SR2",
+      "vehicle_id": "V2",
+      "status_id": "VS1",
+      "tracking_code": "TRK-0002",
+      "registration_date": "2025-05-14T09:20:00Z",
+      "notes": "Diagnóstico general",
+      "last_updated": "2025-05-14T11:00:00Z"
+    }
+  ],
+
+  "workshopServiceRecords": [
+    { "workshop_service_id": "WS1", "service_record_id": "SR1" },
+    { "workshop_service_id": "WS2", "service_record_id": "SR2" }
+  ],
+
+  "serviceTypes": [
+    { "service_type_id": "ST1", "name": "Cambio de aceite", "description": "Incluye filtro" },
+    { "service_type_id": "ST2", "name": "Alineación y balanceo", "description": "4 ruedas" }
+  ],
+
+  "workshops": [
+    {
+      "workshop_id": "W1",
+      "name": "Tallerazo El amigo",
+      "description": "Servicio multimarca",
+      "image": "https://reservacex.com/blog/wp-content/uploads/2024/03/es-rentable-un-taller-mecanico-2.jpg",
+      "location_id": "LOC1",
+      "schedule_id": "SCH1",
+      "contact_email": "contacto@tallerazo.pe",
+      "contact_phone": "+51-974-000-111",
+      "created_at": "2025-05-01T12:00:00Z",
+      "is_active": true
+    },
+    {
+      "workshop_id": "W2",
+      "name": "Tallerazo el Chiclayano",
+      "description": "Servicio multimarca de todas las tiendas",
+      "image": "https://www.wurth.com.ar/blog/wp-content/uploads/2022/12/taller-limpio.jpg",
+      "location_id": "LOC2",
+      "schedule_id": "SCH1",
+      "contact_email": "contacto@tallerazo.pe",
+      "contact_phone": "+51-974-000-111",
+      "created_at": "2025-05-01T12:00:00Z",
+      "is_active": true
+    },
+    {
+      "workshop_id": "W3",
+      "name": "Buen pastor",
+      "description": "Servicio multimarca",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6d6mhzX_gFMFt8-v6zAofZBtR06kv9R048Q&s",
+      "location_id": "LOC3",
+      "schedule_id": "SCH1",
+      "contact_email": "contacto@tallerazo.pe",
+      "contact_phone": "+51-974-000-111",
+      "created_at": "2025-05-01T12:00:00Z",
+      "is_active": true
+    }
+  ],
+
+  "workshopServices": [
+    { "workshop_id": "W1", "service_type_id": "ST1", "base_price": 120.0, "workshop_service_id": "WS1" },
+    { "workshop_id": "W1", "service_type_id": "ST2", "base_price": 80.0, "workshop_service_id": "WS2" }
+  ],
+
+  "workshopAccounts": [
+    {
+      "account_id": "WA1",
+      "workshop_id": "W1",
+      "email": "admin@tallerazo.pe",
+      "password": "hashed-password",
+      "role": "Admin",
+      "is_active": true
+    }
+  ],
+
+  "workshopSchedules": [
+    {
+      "schedule_id": "SCH1",
+      "workshop_id": "W1",
+      "day_of_week": "MONDAY",
+      "start_time": "08:00",
+      "end_time": "18:00",
+      "is_active": true
+    },
+    {
+      "schedule_id": "SCH1",
+      "workshop_id": "W1",
+      "day_of_week": "SATURDAY",
+      "start_time": "08:00",
+      "end_time": "13:00",
+      "is_active": true
+    }
+  ],
+
+  "regions": [
+    { "region_id": "REG1", "name": "Lambayeque" }
+  ],
+
+  "provinces": [
+    { "province_id": "PRO1", "region_id": "REG1", "name": "Chiclayo" }
+  ],
+
+  "districts": [
+    { "district_id": "DIS1", "province_id": "PRO1", "name": "Chiclayo" }
+  ],
+
+  "localities": [
+    { "locality_id": "LOC1A", "district_id": "DIS1", "name": "Centro" }
+  ],
+
+  "locations": [
+    {
+      "location_id": "LOC1",
+      "region_id": "REG1",
+      "province_id": "PRO1",
+      "district_id": "DIS1",
+      "full_address": "Av. Principal 123, Chiclayo"
+    },
+    {
+      "location_id": "LOC2",
+      "region_id": "REG1",
+      "province_id": "PRO1",
+      "district_id": "DIS1",
+      "full_address": "Av. Principal 123, Chiclayo"
+    },
+    {
+      "location_id": "LOC3",
+      "region_id": "REG1",
+      "province_id": "PRO1",
+      "district_id": "DIS1",
+      "full_address": "Av. Principal 123, Chiclayo"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
-import {WorkshopItemComponent, Workshop} from "../workshop-item/workshop-item.component";
-import { Component } from '@angular/core';
+import {WorkshopItemComponent} from "../workshop-item/workshop-item.component";
+import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import {WorkshopInfo} from '../../model/workshop-info';
+import {WorkshopInfoService} from '../../services/workshop-info.service';
 @Component({
   selector: 'app-workshop-list',
     imports: [
@@ -11,55 +13,23 @@ import { CommonModule } from '@angular/common';
   templateUrl: './workshop-list.component.html',
   styleUrl: './workshop-list.component.css'
 })
-export class WorkshopListComponent {
-  constructor(private router: Router) {}
+export class WorkshopListComponent implements OnInit {
 
-  workshops: Workshop[] = [
-    //  Ejemplo de datos
-    {
-      id: '1',
-      name: 'Nombre de la empresa',
-      address: 'Av. Siempre Viva 123',
-      telephone: '(01) 123-4567',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat...',
-    },
-    {
-      id: '2',
-      name: 'Nombre de la empresa',
-      address: 'Av. Siempre Viva 123',
-      telephone: '(01) 123-4567',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat...',
-    },
-    {
-      id: '3',
-      name: 'Nombre de la empresa',
-      address: 'Av. Siempre Viva 123',
-      telephone: '(01) 123-4567',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat...',
-    },
-    {
-      id: '4',
-      name: 'Nombre de la empresa',
-      address: 'Av. Siempre Viva 123',
-      telephone: '(01) 123-4567',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat...',
-    },
-    {
-      id: '5',
-      name: 'Nombre de la empresa',
-      address: 'Av. Siempre Viva 123',
-      telephone: '(01) 123-4567',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat...',
-    },
-    {
-      id: '6',
-      name: 'Nombre de la empresa',
-      address: 'Av. Siempre Viva 123',
-      telephone: '(01) 123-4567',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat...',
-    },
+  workshops: WorkshopInfo[] = [];
 
-  ];
+  constructor(
+    private router: Router,
+    private workshopSvc: WorkshopInfoService   // ← inyección
+  ) {}
+
+  ngOnInit(): void {
+    this.workshopSvc.getAllWorkshopsInfo().subscribe(infos => {
+      // Mapeamos el DTO de dominio a la interfaz que usa la lista
+      this.workshops = infos
+      console.log(infos[0])
+    });
+  }
+
   goToDetail(id: string) {
     this.router.navigate(['/workshop', id]);
   }

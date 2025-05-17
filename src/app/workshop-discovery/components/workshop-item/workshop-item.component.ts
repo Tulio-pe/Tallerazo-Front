@@ -3,14 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-export interface Workshop {
-  id: string;
-  name: string;
-  address: string;
-  telephone: string;
-  description: string;
-  imageUrl?: string;
-}
+import {WorkshopInfo} from '../../model/workshop-info';
+
 @Component({
   selector: 'app-workshop-item',
   imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule],
@@ -18,6 +12,6 @@ export interface Workshop {
   styleUrl: './workshop-item.component.css'
 })
 export class WorkshopItemComponent {
-  @Input() workshop!: Workshop;
+  @Input() workshop!: WorkshopInfo;
   @Output() view = new EventEmitter<string>();
 }
