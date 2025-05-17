@@ -9,7 +9,7 @@ import {ToolbarComponent} from '../../../public/components/toolbar/toolbar.compo
   templateUrl: "./vehicle-tracking.component.html",
   styleUrls: ["./vehicle-tracking.component.css"],
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ToolbarComponent],
 })
 export class VehicleTrackingComponent implements OnInit {
   trackingCode = ""
