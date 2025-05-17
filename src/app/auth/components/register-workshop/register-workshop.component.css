@@ -1,0 +1,36 @@
+
+/* ------- Panel de LOGIN ------------------------------------------------- */
+.register-pane {
+  /* ancho fijo: 420 px */
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5rem;
+  margin: 2.5rem 0;
+}
+
+.register-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border: 1px lightgray solid;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 500px;
+  h2      { margin: 0 0 8px; font-weight: 700; color: #374151; }
+  .logo   { font-size: 48px; color: #374151; margin-bottom: 12px; }
+
+  /* fuerzo los campos a ocupar toda la línea */
+  .mat-form-field  {
+    display: block;
+    width: 100%;
+  }
+
+  /* botones */
+  .btn-block {
+    width: 100%;
+  }
+}

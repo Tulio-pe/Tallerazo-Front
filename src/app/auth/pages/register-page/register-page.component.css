@@ -1,0 +1,37 @@
+/* ------- Layout global -------------------------------------------------- */
+.auth-wrapper {
+  display: flex;
+  height: 100vh;
+  width:100%;
+}
+.auth-wrapper > app-register-workshop{
+  flex:1 1 0;             /* ocupa todo el ancho restante   */
+  display:flex;           /* centra internamente si quieres */
+  justify-content:center; /* opcional */
+  align-items:center;     /* opcional */
+}
+
+
+/* ------- Panel de REGISTRO --------------------------------------------- */
+.register-pane {
+  background: #646464;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2.5rem;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+
+  h1 { margin: 0 0 18px; font-size: 2rem; font-weight: 700; }
+  p  { max-width: 450px; margin: 0 0 32px; line-height: 1.4; font-size: .95rem; }
+  button { width: 150px; }
+}
+
+/* ------- Responsive ≤ 960 px ------------------------------------------- */
+@media (max-width: 960px) {
+  .auth-wrapper    { flex-direction: column; }
+  .register-pane   { order: -1; border-radius: 0; }
+}

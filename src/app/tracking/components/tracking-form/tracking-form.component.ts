@@ -2,13 +2,13 @@ import {Component} from "@angular/core"
 import {Router} from "@angular/router"
 import {FormBuilder, type FormGroup, Validators, ReactiveFormsModule} from "@angular/forms"
 import {CommonModule} from "@angular/common"
-
+import {ToolbarComponent} from '../../../public/components/toolbar/toolbar.component';
 @Component({
   selector: "app-tracking-form",
   templateUrl: "./tracking-form.component.html",
   styleUrls: ["./tracking-form.component.css"],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule , ToolbarComponent],
 })
 export class TrackingFormComponent {
   trackingForm: FormGroup
