@@ -1,0 +1,51 @@
+<h1>Horario de Atención</h1>
+<p>Configuración de los horarios de atención</p>
+
+<form [formGroup]="scheduleForm" (ngSubmit)="onScheduleRegistered()">
+  @for (day of days; track day) {
+    <div class="day-container" [formGroupName]="day">
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>{{ day }} - Inicio</mat-label>
+        <input matInput id="{{ day }}-start" type="time" formControlName="start" />
+      </mat-form-field>
+
+      @if (scheduleForm.get(day + '.start')?.touched && scheduleForm.get(day + '.start')?.invalid) {
+        @if (scheduleForm.get(day + '.start')?.hasError('required')) {
+          <div class="error">Hora de inicio requerida.</div>
+        }
+        @if (scheduleForm.get(day + '.start')?.hasError('invalidTime')) {
+          <div class="error">Formato inválido.</div>
+        }
+      }
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>{{ day }} - Fin</mat-label>
+        <input matInput id="{{ day }}-end" type="time" formControlName="end" />
+      </mat-form-field>
+
+      @if (scheduleForm.get(day + '.end')?.touched && scheduleForm.get(day + '.end')?.invalid) {
+        @if (scheduleForm.get(day + '.end')?.hasError('required')) {
+          <div class="error">Hora de fin requerida.</div>
+        }
+        @if (scheduleForm.get(day + '.end')?.hasError('invalidTime')) {
+          <div class="error">Formato inválido.</div>
+        }
+      }
+
+      @if (scheduleForm.get(day)?.touched && scheduleForm.get(day)?.hasError('startAfterEnd')) {
+        <div class="error">La hora de inicio debe ser anterior a la de fin.</div>
+      }
+
+    </div>
+  }
+
+  <div class="buttons-group">
+    <button mat-raised-button color="primary" type="submit" [disabled]="scheduleForm.invalid">
+      Guardar cambios
+    </button>
+    <button mat-stroked-button color="warn" type="button" (click)="onCancel()">
+      Cancelar
+    </button>
+  </div>
+</form>
