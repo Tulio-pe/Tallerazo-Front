@@ -3,10 +3,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
-import { NgModule }                from '@angular/core';
 import { CommonModule }            from '@angular/common';
 import { FormsModule }             from '@angular/forms';
-import { RouterModule }            from '@angular/router';
+import { RouterLink }            from '@angular/router';
+
 @Component({
   selector: 'app-login-workshop',
   imports: [
@@ -16,7 +16,7 @@ import { RouterModule }            from '@angular/router';
     MatIconModule,
     CommonModule,
     FormsModule,
-    RouterModule,
+    RouterLink,
   ],
   templateUrl: './login-workshop.component.html',
   styleUrl: './login-workshop.component.css'

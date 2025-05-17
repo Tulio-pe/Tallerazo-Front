@@ -12,6 +12,11 @@ export const routes: Routes = [
       import("./auth/pages/login-page/login-page.component").then((m) => m.LoginPageComponent),
   },
   {
+    path: "register",
+    loadComponent: () =>
+      import("./auth/pages/register-page/register-page.component").then((m) => m.RegisterPageComponent),
+  },
+  {
      path: "vehicle-tracking",
      loadComponent: () =>
        import("./tracking/components/tracking-form/tracking-form.component").then((m) => m.TrackingFormComponent),
@@ -35,5 +40,4 @@ export const routes: Routes = [
     path: "**",
     redirectTo: "",
   },
-
 ]
