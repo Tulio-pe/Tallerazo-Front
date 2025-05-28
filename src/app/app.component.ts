@@ -1,6 +1,6 @@
 import { Component } from "@angular/core"
 import { RouterOutlet } from "@angular/router"
-import {TrackingFormComponent} from './tracking/components/tracking-form/tracking-form.component';
+import {TrackingFormComponent} from './car-tracking/components/tracking-form/tracking-form.component';
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
