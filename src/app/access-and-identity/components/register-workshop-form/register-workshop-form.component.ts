@@ -16,9 +16,9 @@ import {MatIcon} from '@angular/material/icon';
         MatLabel,
         RouterLink
     ],
-  templateUrl: './register-workshop.component.html',
-  styleUrl: './register-workshop.component.css'
+  templateUrl: './register-workshop-form.component.html',
+  styleUrl: './register-workshop-form.component.css'
 })
-export class RegisterWorkshopComponent {
+export class RegisterWorkshopFormComponent {
 
 }

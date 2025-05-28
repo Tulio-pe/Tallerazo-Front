@@ -5,13 +5,13 @@ import  { VehicleTrackingService } from "../../services/vehicle-tracking.service
 import type { VehicleTracking } from "../../domain/models/vehicle-tracking.model"
 
 @Component({
-  selector: "app-vehicle-tracking",
-  templateUrl: "./vehicle-tracking.component.html",
-  styleUrls: ["./vehicle-tracking.component.css"],
+  selector: "app-details-repairment",
+  templateUrl: "./details-repairment.component.html",
+  styleUrls: ["./details-repairment.component.css"],
   standalone: true,
   imports: [CommonModule],
 })
-export class VehicleTrackingComponent implements OnInit {
+export class DetailsRepairmentComponent implements OnInit {
   trackingCode = ""
   vehicleData: VehicleTracking | null = null
   isLoading = true

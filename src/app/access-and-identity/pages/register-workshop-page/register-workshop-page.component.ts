@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import {LoginWorkshopComponent} from "../../components/login-workshop/login-workshop.component";
+import {LoginWorkshopFormComponent} from "../../components/login-workshop-form/login-workshop-form.component";
 import {MatButton} from "@angular/material/button";
-import {RegisterWorkshopComponent} from '../../components/register-workshop/register-workshop.component';
+import {RegisterWorkshopFormComponent} from '../../components/register-workshop-form/register-workshop-form.component';
 import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-register-page',
   imports: [
     MatButton,
-    RegisterWorkshopComponent,
+    RegisterWorkshopFormComponent,
     RouterLink
   ],
-  templateUrl: './register-page.component.html',
-  styleUrl: './register-page.component.css'
+  templateUrl: './register-workshop-page.component.html',
+  styleUrl: './register-workshop-page.component.css'
 })
-export class RegisterPageComponent {
+export class RegisterWorkshopPageComponent {
 
 }

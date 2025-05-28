@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginWorkshopComponent } from './login-workshop.component';
+import { LoginWorkshopFormComponent } from './login-workshop-form.component';
 
 describe('LoginWorkshopComponent', () => {
-  let component: LoginWorkshopComponent;
-  let fixture: ComponentFixture<LoginWorkshopComponent>;
+  let component: LoginWorkshopFormComponent;
+  let fixture: ComponentFixture<LoginWorkshopFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LoginWorkshopComponent]
+      imports: [LoginWorkshopFormComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LoginWorkshopComponent);
+    fixture = TestBed.createComponent(LoginWorkshopFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

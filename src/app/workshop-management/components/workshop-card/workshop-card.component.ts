@@ -8,10 +8,10 @@ import {WorkshopInfo} from '../../model/workshop-info';
 @Component({
   selector: 'app-workshop-item',
   imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule],
-  templateUrl: './workshop-item.component.html',
-  styleUrl: './workshop-item.component.css'
+  templateUrl: './workshop-card.component.html',
+  styleUrl: './workshop-card.component.css'
 })
-export class WorkshopItemComponent {
+export class WorkshopCardComponent {
   @Input() workshop!: WorkshopInfo;
   @Output() view = new EventEmitter<string>();
 }

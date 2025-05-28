@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {LoginWorkshopComponent} from '../../components/login-workshop/login-workshop.component';
+import {LoginWorkshopFormComponent} from '../../components/login-workshop-form/login-workshop-form.component';
 import {MatButton} from '@angular/material/button';
 import {RouterLink} from "@angular/router";
 
@@ -7,13 +7,13 @@ import {RouterLink} from "@angular/router";
 @Component({
   selector: 'app-login-page',
   imports: [
-    LoginWorkshopComponent,
+    LoginWorkshopFormComponent,
     MatButton,
     RouterLink,
   ],
-  templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css'
+  templateUrl: './login-page-workshop.component.html',
+  styleUrl: './login-page-workshop.component.css'
 })
-export class LoginPageComponent {
+export class LoginPageWorkshopComponent {
 
 }

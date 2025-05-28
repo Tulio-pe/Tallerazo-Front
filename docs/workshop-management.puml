@@ -1,27 +1,42 @@
 @startuml
-'https://plantuml.com/class-diagram
+package "WorkshopManagement" {
+  package "model" {
+    class WorkshopInfo <<Entity>> {
+      -name: string
+      -address: string
+      -district: string
+      -schedule: string
+       -phone : string
+       - region : string
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+    }
+  }
+  package "service" {
+    class WorkshopInfoService <<Service>> {
+      +getAll(): Observable<WorkshopInfo[]>
+      +getById(id: string): Observable<WorkshopInfo>
+      +create(workshop: Workshop): Observable<WorkshopInfo>
+      +update(workshop: Workshop): Observable<WorkshopInfo>
+      +filterByDistrict(district: string): Observable<WorkshopInfo[]>
+    }
+    class WorkshopInfoAssembler<<Assembler>>{
+    }
+    interface WorkshopInfoResponse<<Response>>{
+    }
+  }
+  package "pages" {
+    class WorkShopCataloguePage <<Page>> {}
+    class WorkshopDetailsPage <<Page>> {}
+  }
+  package "components" {
+    class WorkshopCardComponent <<Component>> {}
+    class ScheduleEditorComponent <<Component>> {}
+    class WorkShopDetailsComponent <<Component>>{}
+    class WorkshopListComponent <<Component>>{}
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+  }
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+
 
 @enduml

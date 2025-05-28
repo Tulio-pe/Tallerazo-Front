@@ -18,9 +18,9 @@ import { RouterLink }            from '@angular/router';
     FormsModule,
     RouterLink,
   ],
-  templateUrl: './login-workshop.component.html',
-  styleUrl: './login-workshop.component.css'
+  templateUrl: './login-workshop-form.component.html',
+  styleUrl: './login-workshop-form.component.css'
 })
-export class LoginWorkshopComponent {
+export class LoginWorkshopFormComponent {
 
 }

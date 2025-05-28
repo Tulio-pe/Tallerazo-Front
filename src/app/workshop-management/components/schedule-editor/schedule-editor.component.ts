@@ -8,10 +8,10 @@ import {MatIcon} from '@angular/material/icon';
   selector: 'app-atencion',
   standalone: true,
   imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatSnackBarModule,  MatIcon],
-  templateUrl: './atencion.component.html',
-  styleUrl: './atencion.component.css'
+  templateUrl: './schedule-editor.component.html',
+  styleUrl: './schedule-editor.component.css'
 })
-export class AtencionComponent {
+export class ScheduleEditorComponent {
   days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 
   atentionform = new FormGroup(

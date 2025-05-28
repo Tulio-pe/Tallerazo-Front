@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WorkshopItemComponent } from './workshop-item.component';
+import { WorkshopCardComponent } from './workshop-card.component';
 
 describe('WorkshopItemComponent', () => {
-  let component: WorkshopItemComponent;
-  let fixture: ComponentFixture<WorkshopItemComponent>;
+  let component: WorkshopCardComponent;
+  let fixture: ComponentFixture<WorkshopCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WorkshopItemComponent]
+      imports: [WorkshopCardComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WorkshopItemComponent);
+    fixture = TestBed.createComponent(WorkshopCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

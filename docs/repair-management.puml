@@ -1,27 +1,33 @@
 @startuml
-'https://plantuml.com/class-diagram
-
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+package "RepairManagement" {
+  package "model" {
+    class RepairOrder <<Entity>> {
+      -id: string
+      -vehicle: Car
+      -status: string
+      -details: string
+      -workshopAssigned: Workshop
+    }
+    class Vehicle <<Entity>> {
+    }
+  }
+  package "service" {
+    class RepairService <<Service>> {
+      +create(order: RepairOrder): Observable<RepairOrder>
+      +updateStatus(id: string, status: string): Observable<RepairOrder>
+      +filterByStatus(status: string): Observable<RepairOrder[]>
+    }
+  }
+  package "pages" {
+    class DashboardWorkshopPage <<Page>> {}
+    class ListCarsPage <<Page>> {}
+  }
+  package "components" {
+    class ItemAutoComponent <<Component>> {}
+    class SlideBarWorkshop <<Component>> {}
+    class ViewCar <<Component>> {}
+  }
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
 
 @enduml

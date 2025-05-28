@@ -1,4 +1,4 @@
-import {WorkshopItemComponent} from "../workshop-item/workshop-item.component";
+import {WorkshopCardComponent} from "../workshop-card/workshop-card.component";
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import {WorkshopInfoService} from '../../services/workshop-info.service';
 @Component({
   selector: 'app-workshop-list',
     imports: [
-        WorkshopItemComponent,
+        WorkshopCardComponent,
       CommonModule,
     ],
   templateUrl: './workshop-list.component.html',

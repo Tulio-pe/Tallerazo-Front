@@ -1,27 +1,26 @@
 @startuml
-'https://plantuml.com/class-diagram
+package "CarTracking" {
+  package "models" {
+    class Car <<Entity>> {
+      -plateNumber: string
+      -location: string
+      -trackingCode: string
+      +track(): void
+    }
+  }
+  package "services" {
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+  }
+  package "pages" {
+    class TrackingPageComponent <<Page>> {
+      +onSearchTracking(): void
+    }
+  }
+  package "components" {
+    class TrackingFormComponent <<Component>> {}
+    class DetailsRepairmentComponent <<Component>> {}
+  }
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
 
 @enduml

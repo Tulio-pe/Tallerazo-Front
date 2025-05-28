@@ -4,37 +4,37 @@ export const routes: Routes = [
   {
    path: "",
    loadComponent: () =>
-     import("./workshop-discovery/pages/workshop-catalogue-page/workshop-catalogue-page.component").then((m) => m.WorkshopCataloguePageComponent),
+     import("./workshop-management/pages/workshop-catalogue-page/workshop-catalogue-page.component").then((m) => m.WorkshopCataloguePageComponent),
  },
   {
     path: "login",
     loadComponent: () =>
-      import("./auth/pages/login-page/login-page.component").then((m) => m.LoginPageComponent),
+      import("./access-and-identity/pages/login-workshop-page/login-page-workshop.component").then((m) => m.LoginPageWorkshopComponent),
   },
   {
     path: "register",
     loadComponent: () =>
-      import("./auth/pages/register-page/register-page.component").then((m) => m.RegisterPageComponent),
+      import("./access-and-identity/pages/register-workshop-page/register-workshop-page.component").then((m) => m.RegisterWorkshopPageComponent),
   },
   {
-     path: "vehicle-tracking",
+     path: "car-tracking",
      loadComponent: () =>
-       import("./tracking/components/tracking-form/tracking-form.component").then((m) => m.TrackingFormComponent),
+       import("./car-tracking/components/tracking-form/tracking-form.component").then((m) => m.TrackingFormComponent),
    },
    {
-     path: "vehicle-tracking/:code",
+     path: "car-tracking/:code",
      loadComponent: () =>
-       import("./tracking/components/vehicle-tracking/vehicle-tracking.component").then((m) => m.VehicleTrackingComponent),
+       import("./car-tracking/components/details-repairment/details-repairment.component").then((m) => m.DetailsRepairmentComponent),
    },
   {
     path: "workshop/cars",
     loadComponent: () =>
-      import("./workshop-core/pages/list-cars/list-cars.component").then((m) => m.ListCarsComponent),
+      import("./repair-management/pages/list-cars/list-cars.component").then((m) => m.ListCarsComponent),
   },
   {
     path: "workshop/dashboard",
     loadComponent: () =>
-      import("./workshop-core/pages/dashboard-workshop/dashboard-workshop.component").then((m) => m.DashboardComponent),
+      import("./repair-management/pages/dashboard-workshop/dashboard-workshop.component").then((m) => m.DashboardComponent),
   },
   {
     path: "**",

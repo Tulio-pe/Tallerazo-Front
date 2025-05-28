@@ -1,27 +1,36 @@
 @startuml
 'https://plantuml.com/class-diagram
+package "IdentitityAccess" {
+  package "model" {
+  }
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+  package "services" {
+  }
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+  package "pages" {
+    class LoginWorkshopPage <<Component>> {
+      +ngOnInit(): void
+      +onLogin(): void
+    }
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+    class RegisterWorkshopComponent <<Component>> {
+      +onRegister(): void
+    }
+    class EditProfilePage <<Component>> {
+      +onUpdateProfile(): void
+    }
+  }
+  package "components" {
+    class LoginWorkshopFormComponent <<Component>> {
+          +ngOnInit(): void
+          +onLogin(): void
+        }
 
-class ArrayList {
-Object[] elementData
-size()
+        class RegisterWorkshopFormComponent <<Component>> {
+          +onRegister(): void
+    }
+  }
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
 
 @enduml
