@@ -3,13 +3,13 @@ import  { ActivatedRoute, Router } from "@angular/router"
 import { CommonModule } from "@angular/common"
 import  { VehicleTrackingService } from "../../services/vehicle-tracking.service"
 import type { VehicleTracking } from "../../domain/models/vehicle-tracking.model"
-
+import {ToolbarComponent} from '../../../public/components/toolbar/toolbar.component';
 @Component({
   selector: "app-details-repairment",
   templateUrl: "./details-repairment.component.html",
   styleUrls: ["./details-repairment.component.css"],
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ToolbarComponent],
 })
 export class DetailsRepairmentComponent implements OnInit {
   trackingCode = ""
